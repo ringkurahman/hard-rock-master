@@ -37,7 +37,7 @@ function showData(data) {
         <h3 class="lyrics-name">${song.artist.name}</h3><p class="author lead"> Album by <span>${song.title}</span>
         </div>
         <div class="col-md-5 text-md-right text-center">
-        <button class="btn btn-success" data-artist="${song.artist.name}" data-songtitle="${song.title}">Get Lyrics</button></p>
+        <button class="btn btn-success" data-artist="${song.artist.name}" data-song-title="${song.title}">Get Lyrics</button></p>
         </div>
         </div>
         `;
@@ -62,7 +62,7 @@ displayFancy.addEventListener('click', (event) => {
   const lyricBtn = event.target;
   if (lyricBtn.tagName === 'BUTTON') {
     const artist = lyricBtn.getAttribute('data-artist');
-    const songTitle = lyricBtn.getAttribute('data-songtitle');
+    const songTitle = lyricBtn.getAttribute('data-song-title');
     getLyrics(artist, songTitle);
   }
 });
